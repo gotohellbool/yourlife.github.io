@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tgminibot</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="center" align = "center">
+    <h1>Your Age: </h1>
+    <h3 id = "score"></h3>
+    <div class="coin">
+      <img src="img/1.png" id="myImage">
+    </div>
+    <div class="text" align="left">
+      <p  id = "myTextes">Вы еще молоды и ничего не успели сделать, впереди много нового!!<br></p>
+      <h2 class="info" id = "hark"><br>Рост: 0.5<br>
+          Вес: Пушинка<br>
+          Речь: Посполитая<br></h2>
+    </div>
+  </div>
+  <script>
+  const images = ['img/2.png','img/3.png','img/4.png','img/5.png','img/6.png','img/7.png','img/8.png','img/9.png','img/10.png','img/11.png','img/12.png','img/13.jpeg'];
+  const textes = ['Вы научились носить трусы!!', 'Вы ходите! У вас есть мишка!', 'Вы купили себе лук шорты + футболка с МаКуином!', 'ХААХАХАХАХА, тупой школьник','ФУТБОЛ ФУТБОЛ ФУТБОЛ! Осуществите мечту Сергея Андреевичка Шморгана','Вы скачали доту и апнули 1 рекрута!!','Вы поступили в ЮГУ и теперь у вас 2 пути, водка и IT','Вы закончили универ и вам пара в аримю! Что? У вас военник? Вот повезло!','Мужик, харэ катать доту, пора детей делать','Ну что старичок, уже не то, да? Качай доту, будем снэпок искать!','Раньше было лучше... ЧЕ? ЧЕВО? Проститутки... Наркоманы... Тьфу','Поздравляю!! ВЫ УМЕРЛИ']
+  const harks = ['','Рост: 0.66 Вес: Имею Речь: Че-то пока не русиш', 'Рост: 1Вес: 10кг Речь: уже что-то на татарском', 'Рост: 1.7.10 Вес: 64 блока земли Речь: Тупого школьника', 'Рост: 1.52 Вес: Лионеля Мэси Речь: "КУДА ТЫ БЬЕШЬ"', 'Рост: 0.5 человека Вес: 12 танго Речь: Встань мид ******', 'Рост: 1.75 Вес: tg/..... Речь: 0101010010101', 'Рост: 1.81 Вес: Рязань ВДВ Речь: Не пиду в армию, ууууууу, не пиду в армию', 'Рост: 1.85 Вес: с Главной ХМАО в баню ходит Речь: Невнятная', 'Рост: 1.75 Вес: в огороде потерял Речь: 60 минут говорят правду!', 'Рост: 1.7 Вес: В бороде Речь: Маразматическая', 'Рост: 3 метра под землей Вес: нету Речь: тишина']
+  const image = document.getElementById('myImage');
+  const text = document.getElementById('myTextes');
+  const text2 = document.getElementById('hark');
+  const score = document.getElementById('score');
+  let count = 0;
+  let currentImageIndex = 0;
+
+  image.addEventListener('click', () => {
+  count+= 1;
+    if (count%10 == 0) {
+      score.textContent = count/10;
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+      document.getElementById('myImage').src = images[currentImageIndex];
+      text.textContent = textes[currentImageIndex];
+      text2.textContent = harks[currentImageIndex];
+    }
+  });
+  </script>
+</body>
+</html>
