@@ -1,0 +1,43 @@
+  body {
+    font-family: sans-serif;
+    text-align: center;
+    padding: 5px;
+    margin: 0;
+    background-image: url(img/backg.jpg);
+    background-position: bottom;
+    background-repeat: ;
+  }
+  .text{
+    padding-left: 30px;
+  }
+  h2{
+    margin: 0;
+    font-size: 20px;
+  }
+  h3{
+    margin: 0;
+  }
+  p{
+    margin: 0;
+    padding-top: 10px;
+    font-size: 20px;
+  }
+  img{
+    height: 320px;
+    width: auto;
+  }
+  img:active{
+    transform: scale(0.9);
+  }
+  h1{
+    font-size: 50px;
+    margin: 0;
+    padding-top: 5px;
+  }
+.center{
+  background-color: white;
+  width: 400px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
